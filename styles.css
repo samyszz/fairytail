@@ -1,10 +1,26 @@
+@font-face {
+    font-family: 'Hugolers Stylish';
+    src: url('Hugolers\ Stylish.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Willgrace';
+    src: url('Disney\ Dreams.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
 body {
-    font-family: 'Cinzel', serif;
+    font-family: 'Hugolers Stylish', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #111;
     color: white;
 }
+
 
 .container {
     display: flex;
@@ -33,22 +49,14 @@ body {
     color: #f4c542;
 }
 
-/* Carrossel ajustado */
+/* Carrossel */
 .carrossel {
     position: relative;
-    max-width: 90%; /* Aumentando o tamanho do carrossel */
+    max-width: 90%;
     overflow: hidden;
     flex-grow: 1;
     margin: auto;
 }
-
-.slide img {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 10px;
-}
-
 
 .slides {
     display: flex;
@@ -60,8 +68,14 @@ body {
     position: relative;
 }
 
+.slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+}
 
-
+/* Legenda (caption) */
 .caption {
     position: absolute;
     bottom: 50px;
@@ -72,13 +86,18 @@ body {
     font-size: 22px;
     max-width: 40%;
     text-align: left;
+    font-family: 'Hugolers Stylish', sans-serif; 
 }
 
 .caption h1 {
-    font-size: 48px;
-    font-weight: bold;
-    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 2rem;
+    flex-wrap: wrap;
+    font-family: 'Hugolers Stylish', sans-serif; 
 }
+
 
 .buttons {
     display: flex;
@@ -88,16 +107,16 @@ body {
 
 button {
     background-color: white;
-    color: black;
+    color: rgb(0, 0, 0);
     border: none;
     cursor: pointer;
     padding: 10px 20px;
     font-size: 18px;
     border-radius: 5px;
-    transition: background 0.3s;
     display: flex;
     align-items: center;
     gap: 10px;
+    font-family: 'Hugolers Stylish', sans-serif; 
 }
 
 button i {
@@ -107,6 +126,39 @@ button i {
 button:hover {
     background-color: #f4c542;
 }
+
+
+.play-button, .info-button {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-family: 'WillGrace', sans-serif; 
+}
+
+.play-button i {
+    margin-right: 5px;
+}
+.play-button:hover {
+    background-color:#f4c542;
+}
+
+.play-button {
+    background-color:rgb(0, 0, 0);
+}
+
+.info-button {
+ background-color: black;
+}
+
+.info-button:hover {
+    background-color: #f4c542;
+   }
+
 
 .prev, .next {
     position: absolute;
